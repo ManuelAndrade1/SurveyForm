@@ -1,0 +1,104 @@
+<!DOCTYPE HTML5>
+
+<html>
+    <head>
+        <title>Survey Form</title>
+        <style>
+            body {font-family: Open Sans;}
+            #main-info{
+                margin: 50px 0 0 0;
+                text-align: center;
+            }
+            main{
+                display: flex;
+                flex-direction: columns;
+                justify-content: center;
+            }
+            #container{
+                background-color: rgba(168, 168, 168, 0.4);
+                width: 70vw;
+                max-width: 700px;
+                border-radius: 5%;
+            }
+            #survey-form {
+                margin: 25px 15px 25px 25px;
+            }
+            #add-comments {
+                font-family: Open Sans;
+                width: 45vw;
+                max-width: 400px;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="main-info">
+                <h1 id="title">The LoL Player Form</h1>
+                <p id="description">Thank you for taking this survey about your champion pool!</<p>
+            </div>
+        </header>
+        <main>
+            <div id="container">
+                <form action="" id="survey-form">
+                    <label id="name-label" for="name">Name</label><br>
+                    <input id="name" type="text" placeholder="Enter your name" required><br><br>
+                    <label id="email-label" for="email">Email</label><br>
+                    <input id="email" type="email" placeholder="Enter your email" required><br><br>
+                    <label id="number-label" for="number">Age (optional)</label><br>
+                    <input id="number" type="number" placeholder="Age" min="0" max="99"><br><br>
+                    <label for="dropdown">Which option best describes your current role?</label><br>
+                    <select id="dropdown" required>
+                        <option disabled selected>Select current role</option>
+                        <option name="top">Top</option>
+                        <option name="jungler">Jungle</option>
+                        <option name="midlaner">Mid</option>
+                        <option name="adcarry">AD Carry</option>
+                        <option name="support">Support</option>
+                    </select><br><br>
+                    <label class="select-title">Would you recommend your role to a friend?</label><br>
+                    <label for="absolutely">
+                        <input id="absolutely" type="radio" name="recommend" value="absolutely">Absolutely
+                    </label><br>
+                    <label for="maybe">
+                        <input id="maybe" type="radio" name="recommend" value="maybe">Maybe
+                    </label><br>
+                    <label for="not_sure">
+                        <input id="not_sure" type="radio" name="recommend" value="not_sure">Not sure
+                    </label><br><br>
+                    <label for="playstyle">What is your favorite type of champ?</label><br>
+                    <select id="playstyle">
+                        <option disabled selected>Select an option</option>
+                        <option name="fighter">Fighter</option>
+                        <option name="mage">Mage</option>
+                        <option name="asssassin">Assassin</option>
+                        <option name="marksman">Marksman</option>
+                        <option name="tank">Tank</option>
+                        <option name="supp">Support</option>
+                    </select><br><br>
+                    <label class="select-title">Which of the following LoL Esports teams do you know? (check all that apply)</label><br>
+                    <label for="kru">
+                        <input id="kru" type="checkbox" name="teams" value="kru">Kru
+                    </label><br>
+                    <label for="t1">
+                        <input id="t1" type="checkbox" name="teams" value="t1">T1
+                    </label><br>
+                    <label for="koi">
+                        <input id="koi" type="checkbox" name="teams" value="koi">KOI
+                    </label><br>
+                    <label for="giants">
+                        <input id="giants" type="checkbox" name="teams" value="giants">Giants
+                    </label><br>
+                    <label for="skt">
+                        <input id="skt" type="checkbox" name="teams" value="skt">SKT
+                    </label><br><br>
+                    <label for="add-comments">Additional comments on your experience with LoL so far?</label><br>
+                    <textarea id="add-comments" placeholder="Add your comment here..."></textarea><br>
+                    <label for="submit">
+                        <input id="submit" type="submit" placeholder="Submit">
+                    </label>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
